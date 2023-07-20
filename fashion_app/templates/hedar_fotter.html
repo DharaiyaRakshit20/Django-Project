@@ -36,8 +36,9 @@
     <div class="offcanvas-menu-wrapper">
         <div class="offcanvas__option">
             <div class="offcanvas__links">
-                <a href="sign.html">Sign in</a>
-                <a href="#">FAQs</a>
+                <a href="{% url 'register' %}">Sign Up</a>
+                <a href="{% url 'logout' %}">Logout</a>
+                <a href="{% url 'profile' %}">{{data.name}}</a>
             </div>
             <div class="offcanvas__top__hover">
                 <span>Usd <i class="arrow_carrot-down"></i></span>
@@ -52,7 +53,7 @@
             <a href="#" class="search-switch"><img src="{% static 'img/icon/search.png' %}' %}" alt=""></a>
             <a href="#"><img src="{% static 'img/icon/heart.png' %}" alt=""></a>
             <a href="#"><img src="{% static 'img/icon/cart.png' %}" alt=""> <span>0</span></a>
-            <div class="price">$0.00</div>
+            <div class="price">Rs.{{final_total}}</div>
         </div>
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__text">
@@ -107,15 +108,14 @@
                             <li><a href="{% url 'shop' %}">Shop</a></li>
                             <li><a href="#">Pages</a>
                                 <ul class="dropdown">
-                                    <li><a href="./about.html">About Us</a></li>
-                                    <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shopping-cart.html">Shopping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
-                                    <li><a href="./blog-details.html">Blog Details</a></li>
+                                    <li><a href="{% url 'about_us' %}">About Us</a></li>
+                                    <li><a href="{% url 'cart' %}">Shopping Cart</a></li>
+                                    <li><a href="{% url 'checkout'%}">Check Out</a></li>
+                                    <li><a href="{% url 'blog' %}">Blog Details</a></li>
                                 </ul>
                             </li>
-                            <li><a href="./blog.html">Blog</a></li>
-                            <li><a href="./contact.html">Contacts</a></li>
+                            <li><a href="{% url 'my_order' %}">My Order</a></li>
+                            <li><a href="{% url 'contact' %}">Contacts</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -124,8 +124,8 @@
                     <div class="header__nav__option">
                         <a class="search-switch"><img src="{% static 'img/icon/search.png' %}" ></a>
                         <a href="#"><img src="{% static 'img/icon/heart.png' %}" alt=""></a>
-                        <a href="{% url 'cart' %}"><img src="{% static 'img/icon/cart.png' %}" alt=""> <span>0</span></a> 
-                        <div class="price">$0.00</div>
+                        <a href="{% url 'cart' %}"><img src="{% static 'img/icon/cart.png' %}" alt=""> <span>{{all_num}}</span></a> 
+                        <div class="price">Rs.{{final_total}}</div>
                     </div>
                     
                 </div>

@@ -1,7 +1,8 @@
 from django.db import models
+from fashion_app.models import *
 
-# Create your models here.
 
+#==================Seller Register Model Table=====================
 class Seller_Register(models.Model):
     seller_name=models.CharField(max_length=50)
     seller_email=models.EmailField(unique=True)
@@ -12,12 +13,18 @@ class Seller_Register(models.Model):
     def __str__(self):
         return self.seller_email
 
+
+#==================Catlog Listing Model Table=====================
 class Listing_Catlog(models.Model):
     Catlog_Image=models.FileField(upload_to="Listing/", default="Listing/defult.jpg")
     Catlog_Name=models.CharField(max_length=50)
     Catlog_Price=models.IntegerField(default=0)
     Catlog_Sale_Price=models.CharField(max_length=50)
     Catlog_Quntity=models.CharField(max_length=50)
+    Catlog_Catgary=models.CharField(max_length=50,null=True)
+    Catlog_Branding=models.CharField(max_length=50,null=True)
+    Catlog_Tags=models.CharField(max_length=50,null=True)
+
 
     #==========Sizes=========
     Size=[("XS","XS"),("S","S"),("M","M"),("L","L"),("XL","XL"),("XXL","XXL"),("XXXL","XXXL")]

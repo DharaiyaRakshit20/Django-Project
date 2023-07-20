@@ -53,6 +53,15 @@
                                     <input type="text" placeholder="Catlog Quntity" name="Catlog_Quntity" value={{one_data.Catlog_Quntity}}>
                                 </div>
                                 <div class="col-lg-8">
+                                    <input type="text" placeholder="Catlog Catgary" name="Catlog_Catgary" value={{one_data.Catlog_Catgary}}>
+                                </div>
+                                <div class="col-lg-8">
+                                    <input type="text" placeholder="Catlog Branding" name="Catlog_Branding" value={{one_data.Catlog_Branding}}>
+                                </div>
+                                <div class="col-lg-8">
+                                    <input type="text" placeholder="Catlog Tags" name="Catlog_Tags" value={{one_data.Catlog_Tags}}>
+                                </div>
+                                <div class="col-lg-8">
                                     {% for i in size %}
                                         <label>
                                             <input type="checkbox" id="size_{{i.id}}" name="Catlog_Size" placeholder="Catlog Size" value={{i.0}} {% if i.0 in list_size %} checked {%endif%}>{{i.1}}

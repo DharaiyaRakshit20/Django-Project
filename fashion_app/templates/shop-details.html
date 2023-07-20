@@ -92,14 +92,14 @@
                                 <div class="product__details__option__size">
                                     <span>Size:</span>
                                     {% for i in sizes %}
-                                    <input type="radio" class="" name="size" >
+                                    <input type="radio" class="" name="size" value="{{i}}">
                                     <label for="size-1">{{i}}</label>
                                     {% endfor %}
                                 </div>
                                 <div class="product__details__option__color">
                                     <span>Color:</span>
                                     {% for i in colors %}
-                                    <input type="radio" id="sp-1" name="color">
+                                    <input type="radio" id="sp-1" name="color" value="{{i}}">
                                     <label  for="sp-1">{{i}}</label>
                                     {% endfor %}
                                 </div>

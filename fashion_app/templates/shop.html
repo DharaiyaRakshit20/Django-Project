@@ -41,15 +41,13 @@
                                         <div class="card-body">
                                             <div class="shop__sidebar__categories">
                                                 <ul class="nice-scroll">
-                                                    <li><a href="#">Men (20)</a></li>
-                                                    <li><a href="#">Women (20)</a></li>
-                                                    <li><a href="#">Bags (20)</a></li>
-                                                    <li><a href="#">Clothing (20)</a></li>
-                                                    <li><a href="#">Shoes (20)</a></li>
-                                                    <li><a href="#">Accessories (20)</a></li>
-                                                    <li><a href="#">Kids (20)</a></li>
-                                                    <li><a href="#">Kids (20)</a></li>
-                                                    <li><a href="#">Kids (20)</a></li>
+                                                    <li><a href="{% url 'Categories' 'Men' %}">Men</a></li>
+                                                    <li><a href="{% url 'Categories' 'Women' %}">Women </a></li>
+                                                    <li><a href="{% url 'Categories' 'Bags' %}">Bags</a></li>
+                                                    <li><a href="{% url 'Categories' 'Clothing' %}">Clothing</a></li>
+                                                    <li><a href="{% url 'Categories' 'Shoes' %}">Shoes </a></li>
+                                                    <li><a href="{% url 'Categories' 'Accessories' %}">Accessories </a></li>
+                                                    <li><a href="{% url 'Categories' 'Kids' %}">Kids </a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -63,10 +61,14 @@
                                         <div class="card-body">
                                             <div class="shop__sidebar__brand">
                                                 <ul>
-                                                    <li><a href="#">Louis Vuitton</a></li>
-                                                    <li><a href="#">Chanel</a></li>
-                                                    <li><a href="#">Hermes</a></li>
-                                                    <li><a href="#">Gucci</a></li>
+                                                    <li><a href="{% url 'Categories_B' 'Louis' %}">Louis Vuitton</a></li>
+                                                    <li><a href="{% url 'Categories_B' 'Chanel' %}">Chanel</a></li>
+                                                    <li><a href="{% url 'Categories_B' 'Hermes' %}">Hermes</a></li>
+                                                    <li><a href="{% url 'Categories_B' 'Gucci' %}">Gucci</a></li>
+                                                    <li><a href="{% url 'Categories_B' 'H&M' %}">H&M</a></li>
+                                                    <li><a href="{% url 'Categories_B' 'Adidas' %}">Adidas</a></li>
+                                                    <li><a href="{% url 'Categories_B' 'Burberry' %}">Burberry</a></li>
+                                                    <li><a href="{% url 'Categories_B' 'Nike' %}">Nike</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -80,12 +82,13 @@
                                         <div class="card-body">
                                             <div class="shop__sidebar__price">
                                                 <ul>
-                                                    <li><a href="#">$0.00 - $50.00</a></li>
-                                                    <li><a href="#">$50.00 - $100.00</a></li>
-                                                    <li><a href="#">$100.00 - $150.00</a></li>
-                                                    <li><a href="#">$150.00 - $200.00</a></li>
-                                                    <li><a href="#">$200.00 - $250.00</a></li>
-                                                    <li><a href="#">250.00+</a></li>
+                                                    <li><a href="{% url 'Categories_P' '0-300' %}">Rs.0 - Rs.300</a></li>
+                                                    <li><a href="{% url 'Categories_P' '300-400' %}">Rs.300 - Rs.400</a></li>
+                                                    <li><a href="{% url 'Categories_P' '400-500' %}">Rs.400 - Rs.500</a></li>
+                                                    <li><a href="{% url 'Categories_P' '500-600' %}">Rs.500 - Rs.600</a></li>
+                                                    <li><a href="{% url 'Categories_P' '600-700' %}">Rs.600 - Rs.700</a></li>
+                                                    <li><a href="{% url 'Categories_P' '700-800' %}">Rs.700 - Rs.800</a></li>
+                                                    <li><a href="{% url 'Categories_P' '900-2000' %}">Rs.900+</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -98,35 +101,35 @@
                                     <div id="collapseFour" class="collapse show" data-parent="#accordionExample">
                                         <div class="card-body">
                                             <div class="shop__sidebar__size">
-                                                <label for="xs">xs
-                                                    <input type="radio" id="xs">
+                                                <label for="xs"><a href="{% url 'Categories_S' 'XS' %}">XS
+                                                    <input type="radio" id="xs"></a>
                                                 </label>
-                                                <label for="sm">s
+                                                <label for="sm"><a href="{% url 'Categories_S' 'S' %}">S</a>
                                                     <input type="radio" id="sm">
                                                 </label>
-                                                <label for="md">m
+                                                <label for="md"><a href="{% url 'Categories_S' 'M' %}">M</a>
                                                     <input type="radio" id="md">
                                                 </label>
-                                                <label for="xl">xl
+                                                <label for="xl"><a href="{% url 'Categories_S' 'XL' %}">XL</a>
                                                     <input type="radio" id="xl">
                                                 </label>
-                                                <label for="2xl">2xl
+                                                <label for="2xl"><a href="{% url 'Categories_S' '2XL' %}">2XL</a>
                                                     <input type="radio" id="2xl">
                                                 </label>
-                                                <label for="xxl">xxl
+                                                <label for="xxl"><a href="{% url 'Categories_S' 'XXL' %}">XXL</a>
                                                     <input type="radio" id="xxl">
                                                 </label>
-                                                <label for="3xl">3xl
+                                                <label for="3xl"><a href="{% url 'Categories_S' '3XL' %}">3XL</a>
                                                     <input type="radio" id="3xl">
                                                 </label>
-                                                <label for="4xl">4xl
+                                                <label for="4xl"><a href="{% url 'Categories_S' '4XL' %}">4XL</a>
                                                     <input type="radio" id="4xl">
                                                 </label>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card">
+                                {% comment %} <div class="card">
                                     <div class="card-heading">
                                         <a data-toggle="collapse" data-target="#collapseFive">Colors</a>
                                     </div>
@@ -134,7 +137,9 @@
                                         <div class="card-body">
                                             <div class="shop__sidebar__color">
                                                 <label class="c-1" for="sp-1">
+                                                    <a href="{% url 'Categories_C' 'Black' %}">
                                                     <input type="radio" id="sp-1">
+                                                    </a>
                                                 </label>
                                                 <label class="c-2" for="sp-2">
                                                     <input type="radio" id="sp-2">
@@ -163,7 +168,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> {% endcomment %}
                                 <div class="card">
                                     <div class="card-heading">
                                         <a data-toggle="collapse" data-target="#collapseSix">Tags</a>
@@ -171,13 +176,13 @@
                                     <div id="collapseSix" class="collapse show" data-parent="#accordionExample">
                                         <div class="card-body">
                                             <div class="shop__sidebar__tags">
-                                                <a href="#">Product</a>
-                                                <a href="#">Bags</a>
-                                                <a href="#">Shoes</a>
-                                                <a href="#">Fashio</a>
-                                                <a href="#">Clothing</a>
-                                                <a href="#">Hats</a>
-                                                <a href="#">Accessories</a>
+                                                <a href="{% url 'Categories_T' 'Product' %}">Product</a>
+                                                <a href="{% url 'Categories_T' 'Bags' %}">Bags</a>
+                                                <a href="{% url 'Categories_T' 'Shoes' %}">Shoes</a>
+                                                <a href="{% url 'Categories_T' 'Fashio' %}">Fashio</a>
+                                                <a href="{% url 'Categories_T' 'Clothing' %}">Clothing</a>
+                                                <a href="{% url 'Categories_T' 'Hats' %}">Hats</a>
+                                                <a href="{% url 'Categories_T' 'Accessories' %}">Accessories</a>
                                             </div>
                                         </div>
                                     </div>
@@ -222,7 +227,7 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6>{{i.Catlog_Name}}</h6>
+                                    <h6>{{i.Catlog_Name}}({{i.Catlog_Catgary}})</h6>
                                     <a href="{% url 'shopping_cart' i.id %}" class="add-cart">+ Add To Cart</a>
                                     <div class="rating">
                                         <i class="fa fa-star-o"></i>

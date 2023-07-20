@@ -24,6 +24,7 @@
     <section class="checkout spad">
         <div class="container">
             <div class="checkout__form">
+                <p style="color:red; font-size:20px;">{{msg}}</p>
                 <form action="{% url 'checkout_details' %}" method="post">
                     {% csrf_token %}
                     <div class="row">
@@ -52,6 +53,10 @@
                             <div class="checkout__input">
                                 <p>Address<span>*</span></p>
                                 <input type="text" placeholder="Street Address" class="checkout__input__add" name="address">    
+                            </div>
+                            <div class="checkout__input">
+                                <p>Address<span>*</span></p>
+                                <input type="text" placeholder="Address" class="checkout__input__add" name="second_address">    
                             </div>
                             <div class="checkout__input">
                                 <p>Town/City<span>*</span></p>
@@ -141,8 +146,8 @@
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
-                                <button type="button" id="pay-btn" class="site-btn">Payment</button>
-                                <button type="submit"  class="site-btn">Place Order</button>
+                                {% comment %} <button type="submit" id="pay-btn" class="site-btn">Payment</button> {% endcomment %}
+                                <button type="submit" name="order" class="site-btn">Place Order</button>
                             </div>
                         </div>
                     </div>
@@ -151,34 +156,5 @@
         </div>
     </section>
     <!-- Checkout Section End -->
-    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-    <script>
-      var options = {
-         
-        // Enter the Key ID generated from the Dashboard
-        key: "rzp_test_eaSqpp8UQPy73g",
-         
-        // Amount is in currency subunits.
-        // Default currency is INR. Hence,
-        // 50000 refers to 50000 paise
-        amount: "{{ final_total }}"*100,
-        currency: "INR",
-         
-        // Your/store name.
-        name: "Dj Razorpay",
-         
-        // Pass the `id` obtained in the response of Step 1
-        order_id: "{{ razorpay_order_id }}",
-        callback_url: "paymenthandler/",
-      };
-       
-      // initialise razorpay with the options.
-      var rzp1 = new Razorpay(options);
-       
-      // add event listener to the payment button.
-      document.getElementById("pay-btn").onclick = function (e) {
-        rzp1.open();
-        e.preventDefault();
-      };
-    </script>
+
 {% endblock %}
